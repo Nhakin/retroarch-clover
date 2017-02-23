@@ -18,7 +18,6 @@ The following cores are available as additional modules (in core_modules folder)
 - mednafen_pce_fast (PC Engine/Turbografx 16)
 - fb_alpha and fb_alpha_cps2 (various arcade machines)
 - picodrive (Sega Master System, Genesis/Mega Drive, Game Gear, Sega 32X)
-<<<<<<< HEAD
 
 Extra RetroArch modules and modules created by other users (in core_modules_extra folder):
 - mupen64plus (Nintendo 64)
@@ -30,19 +29,15 @@ Extra RetroArch modules and modules created by other users (in core_modules_extr
 - mame2000 (various arcades machines), compiled and fixed by D_Skywalk, provided by 1lokolo1/nesito
 - mame2003 (various arcades machines), provided by asper
 - mednafen_ngp (Neo Geo Pocket), provided by asper
-
-=======
->>>>>>> refs/remotes/ClusterM/master
+- gme (various game music formats), provided by asper
+- handy (Atari Lynx), provided by asper (BIOS image required, consult module's readme.txt and libretro Wiki)
+- pcsx_rearmed (Sony PlayStation), provided by asper (BIOS image required, consult module's readme.txt and libretro Wiki)
 
 ## How to use this
 
 1. Go to "releases" tab and download the newest release.zip 
 2. Unpack release.zip anywhere you want
-<<<<<<< HEAD
 3. Copy retroarch.hmod and the cores you want (.hmod files from cores and extra_cores folders) to user_mods directory of Hakchi2.
-=======
-3. Copy retroarch.hmod and the cores you want (.hmod files from "cores" directory) to user_mods directory of Hakchi2.
->>>>>>> refs/remotes/ClusterM/master
 4. Install the modules (all modules can be installed in one go) via Hakchi2's Modules menu.
 5. Add the games as usual
 
@@ -51,17 +46,11 @@ Please note:
 - To make your own RetroArch modules, use the structure from libretro_core_template.zip. Use exisiting modules as a reference.
 - To add your own BIOS images for custom cores, use bios_template.zip (please read the readme.txt inside).
 - If the file extension of your game is not supported by Hakchi2, you may need to change the path in command line arguments (in Hakchi2's game options) to make it point to the corresponding core
-<<<<<<< HEAD
 - To use RetroArch for any NES game, just add "--retroarch" to command line arguments. If you need to load the game with specific NES core, use "--retroarch --core fceumm" to use FCEUmm for this game or "--retroarch --core nestopia" to use Nestopia
 - To use Nestopia instead of FCEUmm, install use_nestopia.hmod module
 - To use PicoDrive for all Genesis/Mega Drive games instead of Genesis Plus GX, install use_picodrive.hmod module. Make sure that picodrive module is installed before installing use_picodrive!
 - To use SNES9x2005 for all SNES games instead of SNES9x2010, install use_snes9x2005.hmod module. Make sure that snes9x2005 module is installed before installing use_snes9x2005!
 - To use Mupen64Plus for all N64 games instead of GLupeN64, install use_mupen64plus.hmod module. Make sure that mupen64plus module is installed before installing use_mupen64plus!
-=======
-- To use RetroArch for any NES game, just add "--retroarch" to command line arguments. If you need to specify NES core, use "--retroarch --core fceumm" to use FCEUmm for this game or "--retroarch --core nestopia" to use Nestopia
-- To use Nestopia instead of FCEUmm, install use_nestopia.hmod module
-- To use PicoDrive for all Genesis/Mega Drive games instead of Genesis Plus GX, install use_picodrive.hmod module. Make sure that picodrive module is installed before installing use_picodrive!
->>>>>>> refs/remotes/ClusterM/master
 - You can re-enable bilinear filtering in RetroArch's settings (Settings —> Video —> Bilinear Filtering)
 - If you want to use RetroArch's XMB UI instead of RGUI, install xmb_assets.hmod and change Menu Driver in Settings —> Driver —> Menu Driver to "xmb"
 
@@ -100,15 +89,11 @@ Executables and arguments for all available cores:
         - /bin/snes10 <rom> <clover_args>
           runs "snes9x2010" core if snes9x2005 is installed as a main core
         - /bin/n64 <rom> <clover_args>
-<<<<<<< HEAD
           runs "glupen64" core or "mupen64plus" core
         - /bin/n64p <rom> <clover_args>
           runs "mupen64plus" core
         - /bin/n64g <rom> <clover_args>
           runs "glupen64" core if mupen64plus is installed as a main core
-=======
-          runs "glupen64" core
->>>>>>> refs/remotes/ClusterM/master
         - /bin/a26 <rom> <clover_args>
           runs "stella" core
         - /bin/pce <rom> <clover_args>
@@ -131,7 +116,14 @@ Executables and arguments for all available cores:
           runs "mame2003" core
         - /bin/ngp <rom> <clover_args>
           runs "mednafen_ngp" core
-
+        - /bin/ngc <rom> <clover_args>
+          runs "mednafen_ngp" core
+        - /bin/gme <rom> <clover_args>
+          runs "gme" core
+        - /bin/lnx <rom> <clover_args>
+          runs "handy" core
+        - /bin/pcsx <rom> <clover_args>
+          runs "pcsx_rearmed" core
 		  
 ## Known issues
 

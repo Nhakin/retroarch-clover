@@ -10,8 +10,9 @@ md release\extra_cores
 
 set path=%path%;C:\Program Files (x86)\7-Zip
 
-zip -rq release/libretro_core_template.zip libretro_core_template.hmod/*
-zip -rq release/CloverApp.zip CloverApp
+zip -rq release\libretro_core_template.zip libretro_core_template.hmod/*
+zip -rq release\bios_template.zip bios_template.hmod/*
+zip -rq release\CloverApp.zip CloverApp
 
 cd retroarch.hmod 
 7z a -ttar * -so -bd | 7z a -tgzip -si -bd "..\release\retroarch.hmod" > nul
