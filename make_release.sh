@@ -1,9 +1,14 @@
 #!/bin/sh
 rm -rf ./release
 mkdir -p release/cores
+<<<<<<< HEAD
 mkdir release/extra_cores
 printf "\nPacking core template and CloverApp\n\n"
+=======
+printf "\nPacking core template, BIOS template and CloverApp\n\n"
+>>>>>>> refs/remotes/ClusterM/master
 zip -rq release/libretro_core_template.zip libretro_core_template.hmod/*
+zip -rq release/bios_template.zip bios_template.hmod/*
 zip -rq release/CloverApp.zip CloverApp
 echo "Packing retroarch.hmod"
 cd retroarch.hmod && tar -czf ../release/retroarch.hmod * && cd ..
