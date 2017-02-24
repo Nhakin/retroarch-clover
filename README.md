@@ -32,6 +32,15 @@ Extra RetroArch modules and modules created by other users (in core_modules_extr
 - gme (various game music formats), provided by asper
 - handy (Atari Lynx), provided by asper (BIOS image required, consult module's readme.txt and libretro Wiki)
 - pcsx_rearmed (Sony PlayStation), provided by asper (BIOS image required, consult module's readme.txt and libretro Wiki)
+- emux_chip8 (CHIP-8), provided by asper
+- fmsx (MSX, MSX 2), provided by asper (BIOS image required, consult module's readme.txt and libretro Wiki)
+- mednafen_vb (Virtual Boy), provided by asper
+- mednafen_wswan (WonderSwan, WonderSwan Color), provided by asper
+- nxengine (Cave Story), provided by asper
+- o2em (Odyssey2 / Videopac+), provided by asper (BIOS image required, consult module's readme.txt and libretro Wiki)
+- prosystem (Atari 7800), provided by asper (BIOS image required, consult module's readme.txt and libretro Wiki)
+- vecx (Vectrex), provided by asper
+- yabause (Sega Saturn), provided by asper (BIOS image required, consult module's readme.txt and libretro Wiki)
 
 ## How to use this
 
@@ -124,7 +133,27 @@ Executables and arguments for all available cores:
           runs "handy" core
         - /bin/pcsx <rom> <clover_args>
           runs "pcsx_rearmed" core
-		  
+        - /bin/ch8 <rom> <clover_args>
+          runs "emux_chip8" core
+        - /bin/msx <rom> <clover_args>
+          runs "fmsx" core
+        - /bin/vb <rom> <clover_args>
+          runs "mednafen_vb" core
+        - /bin/ws <rom> <clover_args>
+          runs "mednafen_wswan" core
+        - /bin/wsc <rom> <clover_args>
+          runs "mednafen_wswan" core
+        - /bin/nxengine <rom> <clover_args>
+          runs "nxengine" core
+        - /bin/o2em <rom> <clover_args>
+          runs "o2em" core
+        - /bin/a78 <rom> <clover_args>
+          runs "prosystem" core
+        - /bin/vec <rom> <clover_args>
+          runs "vecx" core
+        - /bin/yabause <rom> <clover_args>
+          runs "yabause" core
+
 ## Known issues
 
 - Nintendo 64 and CP System II save-states are not working, battery backups work fine
